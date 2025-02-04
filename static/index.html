@@ -4,48 +4,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test API Interface</title>
+    <title>API Tools Interface</title>
 </head>
 <body>
-    <h1>Test API Interface</h1>
+    <h1>API Tools</h1>
 
+    <!-- TinyURL -->
     <div>
-        <h3>GET API Data</h3>
-        <button onclick="getData()">Fetch GET Data</button>
-        <pre id="getResponse"></pre>
+        <h3>Create TinyURL</h3>
+        <input type="text" id="tinyurl-input" placeholder="Enter URL">
+        <button onclick="createTinyUrl()">Create TinyURL (GET)</button>
+        <pre id="tinyurl-response"></pre>
     </div>
 
+    <!-- QR Code Generator -->
     <div>
-        <h3>POST API Data</h3>
-        <button onclick="postData()">Send POST Data</button>
-        <pre id="postResponse"></pre>
+        <h3>Generate QR Code</h3>
+        <input type="text" id="qrcode-input" placeholder="Enter URL">
+        <button onclick="generateQrCode()">Generate QR Code (GET)</button>
+        <pre id="qrcode-response"></pre>
+        <img id="qrcode-img" src="" alt="QR Code" style="display:none;">
+    </div>
+
+    <!-- YouTube Downloader -->
+    <div>
+        <h3>YouTube Video Downloader</h3>
+        <input type="text" id="ytdl-input" placeholder="Enter YouTube URL">
+        <button onclick="downloadYouTube()">Download Video (GET)</button>
+        <pre id="ytdl-response"></pre>
     </div>
 
     <script>
-        // Function to fetch data using GET
-        function getData() {
-            fetch('/api/get')
-                .then(response => response.json())
-                .then(data => {
-                    document.getElementById("getResponse").textContent = JSON.stringify(data, null, 2);
-                });
+        // Create TinyURL using GET
+        function createTinyUrl() {
+            const url = document.getElementById("tinyurl-input").value;
+            fetch(`/api/tinyurl?url=${url}`, {
+                method: 'GET',
+            })
+            .then(response => response.json())
+            .then(data => document.getElementById("tinyurl-response").textContent = data.tiny_url)
+            .catch(error => document.getElementById("tinyurl-response").textContent = "Error: " + error);
         }
 
-        // Function to send data using POST
-        function postData() {
-            const data = { name: 'John', message: 'Hello from HTML!' };
-
-            fetch('/api/post', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(data),
+        // Generate QR Code using GET
+        function generateQrCode() {
+            const url = document.getElementById("qrcode-input").value;
+            fetch(`/api/qrcode?url=${url}`, {
+                method: 'GET',
             })
-                .then(response => response.json())
-                .then(data => {
-                    document.getElementById("postResponse").textContent = JSON.stringify(data, null, 2);
-                });
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("qrcode-response").textContent = data.message;
+                document.getElementById("qrcode-img").src = data.qr_code_path;
+                document.getElementById("qrcode-img").style.display = "block";
+            })
+            .catch(error => document.getElementById("qrcode-response").textContent = "Error: " + error);
+        }
+
+        // Download YouTube video using GET
+        function downloadYouTube() {
+            const url = document.getElementById("ytdl-input").value;
+            fetch(`/api/ytdl?url=${url}`, {
+                method: 'GET',
+            })
+            .then(response => response.json())
+            .then(data => document.getElementById("ytdl-response").textContent = data.message)
+            .catch(error => document.getElementById("ytdl-response").textContent = "Error: " + error);
         }
     </script>
 </body>
