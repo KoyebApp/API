@@ -20,7 +20,7 @@
     <!-- QR Code Generator -->
     <div>
         <h3>Generate QR Code</h3>
-        <input type="text" id="qrcode-input" placeholder="Enter URL">
+        <input type="text" id="qrcode-input" placeholder="Enter Text (URL, numbers, code)">
         <button onclick="generateQrCode()">Generate QR Code (GET)</button>
         <pre id="qrcode-response"></pre>
         <img id="qrcode-img" src="" alt="QR Code" style="display:none;">
@@ -48,8 +48,8 @@
 
         // Generate QR Code using GET
         function generateQrCode() {
-            const url = document.getElementById("qrcode-input").value;
-            fetch(`/api/qrcode?url=${url}`, {
+            const text = document.getElementById("qrcode-input").value;
+            fetch(`/api/qrcode?text=${text}`, {
                 method: 'GET',
             })
             .then(response => response.json())
