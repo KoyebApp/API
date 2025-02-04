@@ -3,6 +3,7 @@ import requests
 import qrcode
 import yt_dlp
 from flask import request, jsonify
+from PIL import Image
 
 # General API route logic
 def get_data():
