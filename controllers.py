@@ -22,15 +22,16 @@ def create_tinyurl():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-# Generate a QR code for a given URL (GET only)
+# Generate a QR code for a given text (GET only)
 def generate_qr_code():
-    url = request.args.get("url")
+    text = request.args.get("text")
     
-    if not url:
-        return jsonify({"error": "URL is required"}), 400
+    if not text:
+        return jsonify({"error": "Text is required"}), 400
     
     try:
-        img = qrcode.make(url)
+        # Generate QR code from any given text (URL, number, or generic string)
+        img = qrcode.make(text)
         img.save("qrcode.png")  # Save the generated QR code locally
         return jsonify({"message": "QR code generated", "qr_code_path": "/static/qrcode.png"}), 200
     except Exception as e:
