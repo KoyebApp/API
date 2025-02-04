@@ -2,9 +2,9 @@
 from flask import Blueprint
 from controllers.apiController import get_data, post_data
 
-api_routes = Blueprint('api_routes', __name__)
+api_routes = Blueprint('routes', __name__)
 
 # Define the routes
-api_routes.route('/api/get', methods=['GET'])(get_data)
-api_routes.route('/api/post', methods=['POST'])(post_data)
+routes.route('/api/get', methods=['GET'])(get_data)
+routes.route('/api/post', methods=['POST'])(post_data)
 
