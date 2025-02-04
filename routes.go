@@ -1,13 +1,13 @@
-// /routes/apiRoutes.go
-package routes
+# routes.py
+from flask import Blueprint
+from controllers import create_tinyurl, generate_qr_code, download_youtube, get_data
 
-import (
-	"github.com/gin-gonic/gin"
-	"my-golang-api/controllers" // Import the controllers package
-)
+api_routes = Blueprint('api_routes', __name__)
 
-func SetupRoutes(router *gin.Engine) {
-	// Define the API routes
-	router.GET("/api/get", controllers.GetData)   // GET route
-	router.POST("/api/post", controllers.PostData) // POST route
-}
+# General API route
+api_routes.route('/api/get', methods=['GET'])(get_data)
+
+# Tool routes for TinyURL, QR Code, and YouTube downloader (GET only)
+api_routes.route('/api/tinyurl', methods=['GET'])(create_tinyurl)
+api_routes.route('/api/qrcode', methods=['GET'])(generate_qr_code)
+api_routes.route('/api/ytdl', methods=['GET'])(download_youtube)
