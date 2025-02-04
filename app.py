@@ -1,17 +1,13 @@
-
-# /app.py
+# app.py
 from flask import Flask
-from routes.apiRoutes import api_routes
+from routes import api_routes  # Import routes from routes.py
 
 app = Flask(__name__)
 
-# Register the API routes
+# Register the routes
 app.register_blueprint(api_routes)
 
-# Serve static files (like your HTML interface)
-app.static_folder = 'static'
-
-# Run the Flask server
-if __name__ == '__main__':
+# Start the Flask app
+if __name__ == "__main__":
     app.run(debug=True)
-  
+    
