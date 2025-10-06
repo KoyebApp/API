@@ -1,0 +1,63 @@
+{
+  "name": "discard-api-sdk",
+  "version": "1.0.0",
+  "description": "Universal SDK for Discard API - Supporting CJS, ESM, TypeScript, and Browser",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "browser": "dist/browser.min.js",
+  "unpkg": "dist/browser.min.js",
+  "jsdelivr": "dist/browser.min.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs",
+      "browser": "./dist/browser.min.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "npm run build:types && npm run build:cjs && npm run build:esm && npm run build:browser",
+    "build:types": "tsc --declaration --emitDeclarationOnly --outDir dist",
+    "build:cjs": "esbuild src/index.ts --bundle --platform=node --target=node20 --outfile=dist/index.cjs --format=cjs",
+    "build:esm": "esbuild src/index.ts --bundle --platform=node --target=node20 --outfile=dist/index.mjs --format=esm",
+    "build:browser": "esbuild src/index.ts --bundle --platform=browser --target=es2015 --outfile=dist/browser.js --format=iife --global-name=DiscardAPI && npm run minify:browser",
+    "minify:browser": "terser dist/browser.js --compress --mangle --output dist/browser.min.js",
+    "test": "node test/test.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "discard-api",
+    "api-sdk",
+    "rest-api",
+    "typescript",
+    "esm",
+    "cjs",
+    "browser"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/discard-api-sdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/discard-api-sdk/issues"
+  },
+  "homepage": "https://github.com/yourusername/discard-api-sdk#readme",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "esbuild": "^0.19.0",
+    "terser": "^5.24.0",
+    "typescript": "^5.3.0"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=20.x"
+  }
+}
