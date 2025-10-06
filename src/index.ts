@@ -1245,25 +1245,168 @@ class DiscardAPI {
     return this.request('/api/store/users', 'POST', undefined, body, 'body');
   }
 
+  // ==================== News ====================
+  AljazeeraEnglish() {
+    return this.request('/api/news/aljazeera', 'GET');
+  }
+  
+  AlJazeeraArticle(params: { url: string }) {
+    return this.request('/api/aljazeera/article', 'GET', params);
+  }
+  
+  AlJazeeraArabic() {
+    return this.request('/api/news/aljazeera/ar', 'GET');
+  }
+  
+  ArabicArticle(params: { url: string }) {
+    return this.request('/api/aljazeera/article/ar', 'GET', params);
+  }
+  
+  TRTWorld() {
+    return this.request('/api/news/trt', 'GET');
+  }
+  
+  TRTArticle(params: { url: string }) {
+    return this.request('/api/trt/article', 'GET', params);
+  }
+  
+  TRTAfrika() {
+    return this.request('/api/news/trt/af', 'GET');
+  }
+  
+  AfrikaArticle(params: { url: string }) {
+    return this.request('/api/trt/article/af', 'GET', params);
+  }
+  
+  SkyNews() {
+    return this.request('/api/news/sky', 'GET');
+  }
+  
+  SkyArticle(params: { url: string }) {
+    return this.request('/api/sky/article', 'GET', params);
+  }
+  
+  SkySports() {
+    return this.request('/api/news/skysports', 'GET');
+  }
+  
+  SportsArticle(params: { url: string }) {
+    return this.request('/api/skysports/article', 'GET', params);
+  }
+  
+  DawnNews() {
+    return this.request('/api/news/dawn', 'GET');
+  }
+  
+  DawnArticle(params: { url: string }) {
+    return this.request('/api/dawn/article', 'GET', params);
+  }
+  
+  CNNNews() {
+    return this.request('/api/news/cnn', 'GET');
+  }
+  
+  CNNArticle(params: { url: string }) {
+    return this.request('/api/cnn/article', 'GET', params);
+  }
+  
+  CGTNWorld() {
+    return this.request('/api/news/cgtn', 'GET');
+  }
+  
+  CGTNArticle(params: { url: string }) {
+    return this.request('/api/cgtn/article', 'GET', params);
+  }
+  
+  GeoUrdu() {
+    return this.request('/api/news/geo', 'GET');
+  }
+  
+  GeoArticle(params: { url: string }) {
+    return this.request('/api/geo/article', 'GET', params);
+  }
+  
+  GeoEnglish() {
+    return this.request('/api/news/geo/en', 'GET');
+  }
+  
+  GeoArticleEn(params: { url: string }) {
+    return this.request('/api/geo/article/en', 'GET', params);
+  }
+  
+  GeoSuper() {
+    return this.request('/api/news/geosuper', 'GET');
+  }
+  
+  SuperArticle(params: { url: string }) {
+    return this.request('/api/geosuper/article', 'GET', params);
+  }
+  
+  ExpressTribune() {
+    return this.request('/api/news/tribune', 'GET');
+  }
+  
+  TribuneArticle(params: { url: string }) {
+    return this.request('/api/tribune/article', 'GET', params);
+  }
+  
+  NeoNews() {
+    return this.request('/api/news/neo', 'GET');
+  }
+  
+  NeoArticle(params: { url: string }) {
+    return this.request('/api/neo/article', 'GET', params);
+  }
+  
+  ExpressNews() {
+    return this.request('/api/news/express', 'GET');
+  }
+  
+  ExpressArticle(params: { url: string }) {
+    return this.request('/api/express/article', 'GET', params);
+  }
+  
+  TheGuardian() {
+    return this.request('/api/news/guardian', 'GET');
+  }
+  
+  GuardianArticle(params: { url: string }) {
+    return this.request('/api/guardian/article', 'GET', params);
+  }
+  
+  AntaraNews() {
+    return this.request('/api/news/antara', 'GET');
+  }
+  
+  AntaraArticle(params: { url: string }) {
+    return this.request('/api/antara/article', 'GET', params);
+  }
+
   // ==================== STALKER ====================
   stalkPinterest(params: { username: string }) {
     return this.request('/api/stalk/pinterest', 'GET', params);
   }
+  
   stalkGithub(params: { username: string }) {
     return this.request('/api/stalk/github', 'GET', params);
   }
+  
   stalkInstagram(params: { username: string }) {
     return this.request('/api/stalk/instagram', 'GET', params);
   }
+  
   stalkThreads(params: { username: string }) {
     return this.request('/api/stalk/threads', 'GET', params);
   }
+  
   stalkTwitter(params: { username: string }) {
     return this.request('/api/stalk/twitter', 'GET', params);
   }
+  
   stalkTelegram(params: { username: string }) {
     return this.request('/api/stalk/telegram', 'GET', params);
   }
+  
   stalkTikTok(params: { username: string }) {
     return this.request('/api/stalk/tiktok', 'GET', params);
   }
