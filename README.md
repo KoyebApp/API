@@ -10,8 +10,8 @@ await api.geminiPro({ text: 'What is AI?' });
 await api.fluxSchnell({ text: 'Beautiful sunset' });
 
 // Downloads
-await api.downloadTikTok({ url: 'https://...' });
-await api.downloadInstagram({ url: 'https://...' });
+await api.dlTikTok({ url: 'https://...' });
+await api.dlInstagram({ url: 'https://...' });
 
 // URL Shorteners
 await api.shortenClck({ url: 'https://github.com/...' });
