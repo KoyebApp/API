@@ -18,7 +18,7 @@ async function runTests() {
     },
     {
       name: 'Dad Joke',
-      fn: () => api.dadJoke();
+      fn: () => api.dadJoke()
     },
     {
       name: 'Random Quote',
