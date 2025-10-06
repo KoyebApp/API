@@ -251,7 +251,7 @@ class DiscardAPI {
     return this.request('/api/apk/search/android1', 'GET', params);
   }
 
-  downloadAndroid1(params: { url: string }) {
+  dlAndroid1(params: { url: string }) {
     return this.request('/api/apk/dl/android1', 'GET', params);
   }
 
@@ -263,7 +263,7 @@ class DiscardAPI {
     return this.request('/api/apk/search/apkmirror', 'GET', params);
   }
 
-  downloadApkMirror(params: { url: string }) {
+  dlApkMirror(params: { url: string }) {
     return this.request('/api/apk/dl/apkmirror', 'GET', params);
   }
 
@@ -271,7 +271,7 @@ class DiscardAPI {
     return this.request('/api/apk/search/apkpure', 'GET', params);
   }
 
-  downloadApkPure(params: { url: string }) {
+  dlApkPure(params: { url: string }) {
     return this.request('/api/apk/dl/apkpure', 'GET', params);
   }
 
@@ -283,7 +283,7 @@ class DiscardAPI {
     return this.request('/api/apk/search/playstore', 'GET', params);
   }
 
-  downloadPlayStore(params: { url: string }) {
+  dlPlayStore(params: { url: string }) {
     return this.request('/api/apk/dl/playstore', 'GET', params);
   }
 
@@ -291,7 +291,7 @@ class DiscardAPI {
     return this.request('/api/apk/search/rexdl', 'GET', params);
   }
 
-  downloadRexdl(params: { url: string }) {
+  dlRexdl(params: { url: string }) {
     return this.request('/api/apk/dl/rexdl', 'GET', params);
   }
 
@@ -630,111 +630,111 @@ class DiscardAPI {
   }
 
   // ==================== DOWNLOADS ====================
-  downloadFacebook(params: { url: string }) {
+  dlFacebook(params: { url: string }) {
     return this.request('/api/dl/facebook', 'GET', params);
   }
 
-  downloadGitClone(params: { url: string }) {
+  dlGitClone(params: { url: string }) {
     return this.request('/api/dl/gitclone', 'GET', params);
   }
 
-  downloadInstagram(params: { url: string }) {
+  dlInstagram(params: { url: string }) {
     return this.request('/api/dl/instagram', 'GET', params);
   }
 
-  downloadMediafire(params: { url: string }) {
+  dlMediafire(params: { url: string }) {
     return this.request('/api/dl/mediafire', 'GET', params);
   }
 
-  downloadPinterest(params: { text: string }) {
+  dlPinterest(params: { text: string }) {
     return this.request('/api/dl/pinterest', 'GET', params);
   }
 
-  downloadTikTok(params: { url: string }) {
+  dlTikTok(params: { url: string }) {
     return this.request('/api/dl/tiktok', 'GET', params);
   }
 
-  downloadTwitter(params: { url: string }) {
+  dlTwitter(params: { url: string }) {
     return this.request('/api/dl/twitter', 'GET', params);
   }
 
-  downloadLikee(params: { url: string }) {
+  dlLikee(params: { url: string }) {
     return this.request('/api/dl/likee', 'GET', params);
   }
 
-  downloadThreads(params: { url: string }) {
+  dlThreads(params: { url: string }) {
     return this.request('/api/dl/threads', 'GET', params);
   }
 
-  downloadTwitch(params: { url: string }) {
+  dlTwitch(params: { url: string }) {
     return this.request('/api/dl/twitch', 'GET', params);
   }
 
-  downloadWallBest(params: { text: string; page?: string }) {
+  dlWallBest(params: { text: string; page?: string }) {
     return this.request('/api/dl/wallbest', 'GET', params);
   }
 
-  downloadWallCraft(params: { text: string }) {
+  dlWallCraft(params: { text: string }) {
     return this.request('/api/dl/wallcraft', 'GET', params);
   }
 
-  downloadWallHaven(params?: { q?: string; sorting?: string; page?: string; purity?: string; categories?: string }) {
+  dlWallHaven(params?: { q?: string; sorting?: string; page?: string; purity?: string; categories?: string }) {
     return this.request('/api/dl/wallhaven', 'GET', params);
   }
 
-  downloadWikimedia(params: { title: string }) {
+  dlWikimedia(params: { title: string }) {
     return this.request('/api/dl/wikimedia', 'GET', params);
   }
 
-  downloadYouTube(params: { url: string; format: string }) {
+  dlYouTube(params: { url: string; format: string }) {
     return this.request('/api/dl/youtube', 'GET', params);
   }
 
-  downloadBilibili(params: { url: string }) {
+  dlBilibili(params: { url: string }) {
     return this.request('/api/dl/bilibili', 'GET', params);
   }
 
-  downloadLinkedIn(params: { url: string }) {
+  dlLinkedIn(params: { url: string }) {
     return this.request('/api/dl/linkedin', 'GET', params);
   }
 
-  downloadSnapChat(params: { url: string }) {
+  dlSnapChat(params: { url: string }) {
     return this.request('/api/dl/snapchat', 'GET', params);
   }
 
-  downloadShareChat(params: { url: string }) {
+  dlShareChat(params: { url: string }) {
     return this.request('/api/dl/sharechat', 'GET', params);
   }
 
-  downloadSnack(params: { url: string }) {
+  dlSnackVideo(params: { url: string }) {
     return this.request('/api/dl/snack', 'GET', params);
   }
 
-  downloadPinterestVideo(params: { url: string }) {
+  dlPinterestVideo(params: { url: string }) {
     return this.request('/api/dl/pinterest', 'GET', params);
   }
 
-  downloadReddit(params: { url: string }) {
+  dlRedditVideo(params: { url: string }) {
     return this.request('/api/dl/reddit', 'GET', params);
   }
 
-  downloadVideezy(params: { url: string }) {
+  dlVideezy(params: { url: string }) {
     return this.request('/api/dl/videezy', 'GET', params);
   }
 
-  downloadVidsPlay(params: { url: string }) {
+  dlVidsPlay(params: { url: string }) {
     return this.request('/api/dl/vidsplay', 'GET', params);
   }
 
-  downloadIMDb(params: { url: string }) {
+  dlIMDbVideo(params: { url: string }) {
     return this.request('/api/dl/imdb', 'GET', params);
   }
 
-  downloadIFunny(params: { url: string }) {
+  dlIFunny(params: { url: string }) {
     return this.request('/api/dl/ifunny', 'GET', params);
   }
 
-  downloadGetty(params: { url: string }) {
+  dlGetty(params: { url: string }) {
     return this.request('/api/dl/getty', 'GET', params);
   }
 
@@ -782,15 +782,15 @@ class DiscardAPI {
     return this.request('/api/img/dailybing', 'GET');
   }
 
-  downloadIStock(params: { url: string }) {
+  dlIStock(params: { url: string }) {
     return this.request('/api/dl/istock', 'GET', params);
   }
 
-  downloadOdysee(params: { url: string }) {
+  dlOdysee(params: { url: string }) {
     return this.request('/api/dl/odysee', 'GET', params);
   }
 
-  downloadAlamy(params: { url: string }) {
+  dlAlamy(params: { url: string }) {
     return this.request('/api/dl/alamy', 'GET', params);
   }
 
@@ -896,7 +896,7 @@ class DiscardAPI {
     return this.request('/api/search/spotify', 'GET', params);
   }
 
-  downloadSpotify(params: { url: string }) {
+  dlSpotify(params: { url: string }) {
     return this.request('/api/dl/spotify', 'GET', params);
   }
 
@@ -904,7 +904,7 @@ class DiscardAPI {
     return this.request('/api/search/soundcloud', 'GET', params);
   }
 
-  downloadSoundCloud(params: { url: string }) {
+  dlSoundCloud(params: { url: string }) {
     return this.request('/api/dl/soundcloud', 'GET', params);
   }
 
