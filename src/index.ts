@@ -1464,6 +1464,10 @@ class DiscardAPI {
     return this.request('/api/klipy/gif', 'GET', params);
   }
 
+  searchMemes(params: { query: string }) {
+    return this.request('/api/klipy/meme', 'GET', params);
+  }
+
   // ==================== TOOLS ====================
   toolsCompress(params: { type: string; text: string }) {
     return this.request('/api/compress', 'GET', params);
@@ -1541,6 +1545,174 @@ class DiscardAPI {
   memesTwoButton(params: { text1: string; text2: string }) {
     return this.request('/api/meme/buttons', 'GET', params);
   }
+  
+  memesYelling(params: { text1: string; text2: string }) {
+    return this.request('/api/meme/yelling', 'GET', params);
+  }
+
+  memesSuccess(params: { text1: string; text2: string }) {
+    return this.request('/api/meme/success', 'GET', params);
+  }
+
+  memesPuppet(params: { text1: string; text2: string }) {
+    return this.request('/api/meme/puppet', 'GET', params);
+  }
+
+  memesCouple(params: { text1: string; text2: string }) {
+    return this.request('/api/meme/couple', 'GET', params);
+  }
+
+  memesSquid(params: { text1: string; text2: string }) {
+    return this.request('/api/meme/squid', 'GET', params);
+  }
+
+  memesMask(params: { text1: string; text2?: string; text3?: string; text4?: string }) {
+    return this.request('/api/meme/mask', 'GET', params);
+  }
+
+  memesDrowning(params: { text1: string; text2?: string; text3?: string; text4?: string }) {
+    return this.request('/api/meme/drowning', 'GET', params);
+  }
+
+  memesDistracted(params: { text1: string; text2?: string; text3?: string }) {
+    return this.request('/api/meme/boyfriend', 'GET', params);
+  }
+
+  memesExit(params: { text1: string; text2?: string; text3?: string }) {
+    return this.request('/api/meme/exit', 'GET', params);
+  }
+
+  // ==================== PHOTOOXY ====================
+  photoPubg(params: { text1: string; text2: string }) {
+    return this.request('/api/photo/pubg', 'GET', params);
+  }
+
+  photoBattle(params: { text1: string; text2: string }) {
+    return this.request('/api/photo/battle4', 'GET', params);
+  }
+
+  photoTikTok(params: { text1: string; text2: string }) {
+    return this.request('/api/photo/tiktok', 'GET', params);
+  }
+
+  photoNeon(params: { text: string }) {
+    return this.request('/api/photo/neon', 'GET', params);
+  }
+
+  photoWarface(params: { text: string }) {
+    return this.request('/api/photo/warface', 'GET', params);
+  }
+
+  photoWarface2(params: { text: string }) {
+    return this.request('/api/photo/warface2', 'GET', params);
+  }
+
+  photoLeague(params: { text: string }) {
+    return this.request('/api/photo/league', 'GET', params);
+  }
+
+  photoLolCover(params: { text: string }) {
+    return this.request('/api/photo/lolcover', 'GET', params);
+  }
+
+  photoLolShine(params: { text: string }) {
+    return this.request('/api/photo/lolshine', 'GET', params);
+  }
+
+  photoMetal(params: { text: string }) {
+    return this.request('/api/photo/darkmetal', 'GET', params);
+  }
+
+  // ==================== EPHOTO360 ====================
+  ephotoDeadpool(params: { text1: string; text2: string }) {
+    return this.request('/api/ephoto/deadpool', 'GET', params);
+  }
+
+  ephotoWolf(params: { text1: string; text2: string }) {
+    return this.request('/api/ephoto/wolf', 'GET', params);
+  }
+
+  ephotoShirt(params: { text1: string; text2: string }) {
+    return this.request('/api/ephoto/shirt', 'GET', params);
+  }
+
+  ephotoPencil(params: { text1: string; text2: string }) {
+    return this.request('/api/ephoto/sketch', 'GET', params);
+  }
+
+  ephotoThor(params: { text1: string; text2: string }) {
+    return this.request('/api/ephoto/thor', 'GET', params);
+  }
+
+  ephotoRoyal(params: { text: string }) {
+    return this.request('/api/ephoto/royal', 'GET', params);
+  }
+
+  ephotoComic(params: { text: string }) {
+    return this.request('/api/ephoto/comic', 'GET', params);
+  }
+
+  ephotoWings(params: { text: string }) {
+    return this.request('/api/ephoto/angel', 'GET', params);
+  }
+
+  ephotoFps(params: { text: string }) {
+    return this.request('/api/ephoto/game', 'GET', params);
+  }
+
+  ephotoMetal(params: { text: string }) {
+    return this.request('/api/ephoto/mavatar', 'GET', params);
+  }
+
+  // ==================== INFORMATION ====================
+  infoGithubUser(params: { username: string }) {
+    return this.request('/api/github/user', 'GET', params);
+  }
+
+  infoGithubRepo(params: { owner: string; repo: string }) {
+    return this.request('/api/github/repo', 'GET', params);
+  }
+
+  infoIMDb(params: { query: string }) {
+    return this.request('/api/info/imdb', 'GET', params);
+  }
+
+  infoTMDb(params: { query: string }) {
+    return this.request('/api/info/tmdb', 'GET', params);
+  }
+
+  infoUniversity(params: { country: string }) {
+    return this.request('/api/info/university', 'GET', params);
+  }
+
+  infoIP(params: { ip: string }) {
+    return this.request('/api/info/ip', 'GET', params);
+  }
+
+  infoTrends(params: { country: string }) {
+    return this.request('/api/info/trends', 'GET', params);
+  }
+
+  infoWeather(params: { city: string }) {
+    return this.request('/api/weather/info', 'GET', params);
+  }
+
+  infoCountry(params: { name: string }) {
+    return this.request('/api/info/country', 'GET', params);
+  }
+
+  infoWikipedia(params: { query: string }) {
+    return this.request('/api/info/wiki', 'GET', params);
+  }
+
+  // ==================== CRYPTO ====================
+ CryptoPrice(params: { id: string }) {
+  return this.request('/api/info/crypto', 'GET', params);
+ }
+
+ cryptoList() {
+  return this.request('/api/crypto/tags', 'GET');
+ }
 
   // ==================== UTILITY METHODS ====================
   setFullResponse(value: boolean): void {
