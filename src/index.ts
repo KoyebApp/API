@@ -1245,7 +1245,7 @@ class DiscardAPI {
     return this.request('/api/store/users', 'POST', undefined, body, 'body');
   }
 
-  // ==================== News ====================
+  // ==================== NEWS ====================
   AljazeeraEnglish() {
     return this.request('/api/news/aljazeera', 'GET');
   }
@@ -1409,6 +1409,59 @@ class DiscardAPI {
   
   stalkTikTok(params: { username: string }) {
     return this.request('/api/stalk/tiktok', 'GET', params);
+  }
+
+  // ==================== SEARCH ====================
+  searchGoogle(params: { query: string }) {
+    return this.request('/api/search/google', 'GET', params);
+  }
+
+  searchBing(params: { query: string }) {
+    return this.request('/api/search/bing', 'GET', params);
+  }
+
+  searchBaidu() {
+    return this.request('/api/search/baidu', 'GET');
+  }
+
+  searchWeibo() {
+    return this.request('/api/search/weibo', 'GET');
+  }
+  
+  searchImgur(params: { query: string }) {
+    return this.request('/api/search/imgur', 'GET', params);
+  }
+
+  searchTime(params: { query: string }) {
+    return this.request('/api/search/time', 'GET', params);
+  }
+
+  searchFlicker(params: { query: string }) {
+    return this.request('/api/search/flicker', 'GET', params);
+  }
+
+  searchItunes(params: { query: string }) {
+    return this.request('/api/search/itunes', 'GET', params);
+  }
+
+  searchWattpad(params: { query: string }) {
+    return this.request('/api/search/wattpad', 'GET', params);
+  }
+
+  searchStickers(params: { query: string }) {
+    return this.request('/api/search/stickers', 'GET', params);
+  }
+
+  searchYoutube(params: { query: string }) {
+    return this.request('/api/search/youtube2', 'GET', params);
+  }
+
+  searchTracks(params: { query: string }) {
+    return this.request('/api/search/youtube2', 'GET', params);
+  }
+  
+  searchGifs(params: { query: string }) {
+    return this.request('/api/klipy/gif', 'GET', params);
   }
 
   // ==================== UTILITY METHODS ====================
