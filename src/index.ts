@@ -1485,6 +1485,58 @@ class DiscardAPI {
     return this.request('/api/tools/dictionary', 'GET', params);
   }
 
+  toolsDictionary2(params: { word: string }) {
+    return this.request('/api/tools/dict', 'GET', params);
+  }
+
+  toolsMathematics(params: { expr: string }) {
+    return this.request('/api/tools/math', 'GET', params);
+  }
+
+  toolsPreview(params: { url: string }) {
+    return this.request('/api/tools/preview', 'GET', params);
+  }
+
+  toolsScreenshot(params: { url: string }) {
+    return this.request('/api/tools/ssweb', 'GET', params);
+  }
+
+  toolsStyleText(params: { text: string }) {
+    return this.request('/api/tools/styletext', 'GET', params);
+  }
+
+  toolsTranslate(params: { text: string; to: string }) {
+    return this.request('/api/tools/translate', 'GET', params);
+  }
+
+  toolsTranslate2(params: { text: string; lang: string }) {
+    return this.request('/api/go/translate', 'GET', params);
+  }
+
+  toolsPing(params: { url: string }) {
+    return this.request('/api/simple/ping', 'GET', params);
+  }
+
+  toolsCounter(params: { count: number }) {
+    return this.request('/api/tools/count', 'GET', params);
+  }
+
+  toolsHandwriting(params: { text: string }) {
+    return this.request('/api/tools/handwrite', 'GET', params);
+  }
+
+  toolsTextStats(params: { text: string }) {
+    return this.request('/api/tools/string', 'GET', params);
+  }
+
+  toolsWordCount(params: { text: string }) {
+    return this.request('/api/word/count', 'GET', params);
+  }
+
+  toolsUnitConvert(params: { from: string; to: string; value: number }) {
+    return this.request('/api/word/count', 'GET', params);
+  }
+
   // ==================== UTILITY METHODS ====================
   setFullResponse(value: boolean): void {
     this.fullResponse = value;
