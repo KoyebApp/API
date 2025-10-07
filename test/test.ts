@@ -1,7 +1,7 @@
 // test/test.ts - TypeScript specific test file
 import DiscardAPI, { DiscardAPIConfig } from '../dist/index.mjs';
 
-const API_KEY: string = 'qasim';
+const API_KEY: string = 'YOUR_API_KEY_HERE';
 
 interface TestCase {
   name: string;
