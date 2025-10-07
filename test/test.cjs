@@ -20,12 +20,12 @@ async function runCJSTests() {
       fn: () => api.NeoArticle({ url: 'https://www.neonews.pk/06-Oct-2025/176006' })
     },
     {
-      name: 'Google Search',
-      fn: () => api.searchGoogle({ query: 'pakistan' })
+      name: 'Simple Counter',
+      fn: () => api.toolsCounter({ count: 100 })
     },
     {
-      name: 'Neo News',
-      fn: () => api.NeoNews()
+      name: 'Unit Converter',
+      fn: () => api.toolsUnitConvert({ from: 'c', to: 'f', value: 20 })
     },
     {
       name: 'Bank Logo',
