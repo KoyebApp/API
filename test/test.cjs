@@ -17,7 +17,7 @@ async function runCJSTests() {
   const tests = [
     {
       name: 'Neo Article',
-      fn: () => api.NoeArticle({ url: 'https://www.neonews.pk/06-Oct-2025/176006' })
+      fn: () => api.NeoArticle({ url: 'https://www.neonews.pk/06-Oct-2025/176006' })
     },
     {
       name: 'Google Search',
