@@ -10,10 +10,10 @@
   "jsdelivr": "dist/browser.min.js",
   "exports": {
     ".": {
+      "browser": "./dist/browser.min.js",
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs",
-      "browser": "./dist/browser.min.js"
+      "require": "./dist/index.cjs"
     }
   },
   "files": [
