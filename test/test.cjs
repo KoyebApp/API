@@ -16,36 +16,20 @@ async function runCJSTests() {
 
   const tests = [
     {
-      name: 'Shorten URL',
-      fn: () => api.shortenClck({ url: 'https://github.com/GlobalTechInfo' })
+      name: 'Neo Article',
+      fn: () => api.NoeArticle({ url: 'https://www.neonews.pk/06-Oct-2025/176006' })
     },
     {
-      name: 'Generate Fake Users',
-      fn: () => api.fakeUsers({ _quantity: 3, _locale: 'en_US', _gender: 'female' })
+      name: 'Google Search',
+      fn: () => api.searchGoogle({ query: 'pakistan' })
     },
     {
-      name: 'Get Random Quote',
-      fn: () => api.randomQuote()
+      name: 'Neo News',
+      fn: () => api.NeoNews()
     },
     {
-      name: 'Programming Joke',
-      fn: () => api.programmingJoke()
-    },
-    {
-      name: 'Cat Image',
-      fn: () => api.catImage()
-    },
-    {
-      name: 'Base64 Encoding',
-      fn: () => api.base64({ mode: 'encode', data: 'CommonJS Test' })
-    },
-    {
-      name: 'QR Code Generation',
-      fn: () => api.qrCode({ text: 'CJS Module Test' })
-    },
-    {
-      name: 'Date Fact',
-      fn: () => api.dateFact({ month: 12, day: 25 })
+      name: 'Bank Logo',
+      fn: () => api.toolsBanklogo({ domain: 'meezanbank.com' })
     }
   ];
 
