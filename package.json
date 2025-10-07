@@ -5,16 +5,23 @@
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
-  "browser": "dist/browser.min.js",
   "unpkg": "dist/browser.min.js",
   "jsdelivr": "dist/browser.min.js",
   "exports": {
     ".": {
-      "browser": "./dist/browser.min.js",
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
       "require": "./dist/index.cjs"
+    },
+    "./browser": {
+      "types": "./dist/browser/index.d.ts",
+      "import": "./dist/browser/index.mjs",
+      "require": "./dist/browser/index.cjs"
     }
+  },
+  "browser": {
+    "./dist/index.mjs": "./dist/browser/index.mjs",
+    "./dist/index.cjs": "./dist/browser/index.cjs"
   },
   "files": [
     "dist",
@@ -26,11 +33,12 @@
     "build:types": "tsc --declaration --emitDeclarationOnly --outDir dist",
     "build:cjs": "esbuild src/index.ts --bundle --platform=node --target=node18 --outfile=dist/index.cjs --format=cjs --external:fetch",
     "build:esm": "esbuild src/index.ts --bundle --platform=node --target=node18 --outfile=dist/index.mjs --format=esm --external:fetch",
-    "build:browser": "esbuild src/index.ts --bundle --platform=browser --target=es2020 --outfile=dist/browser.js --format=iife --global-name=DiscardAPI && npm run minify:browser",
-    "minify:browser": "terser dist/browser.js --compress --mangle --output dist/browser.min.js",
+    "build:browser": "esbuild src/index.ts --bundle --platform=browser --target=es2020 --outfile=dist/browser/index.js --format=esm && npm run minify:browser",
+    "minify:browser": "terser dist/browser/index.js --compress --mangle --output dist/browser/index.min.js",
     "fix:cjs": "echo 'module.exports = module.exports.default;' >> dist/index.cjs",
     "test": "node test/test.js",
     "prepublishOnly": "npm run build"
+   }
   },
   "keywords": [
     "discard-api",
