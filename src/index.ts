@@ -1534,7 +1534,12 @@ class DiscardAPI {
   }
 
   toolsUnitConvert(params: { from: string; to: string; value: number }) {
-    return this.request('/api/word/count', 'GET', params);
+    return this.request('/api/convert/unit', 'GET', params);
+  }
+
+  // ==================== MEMES ====================
+  memesTwoButton(params: { text1: string; text2: string }) {
+    return this.request('/api/meme/buttons', 'GET', params);
   }
 
   // ==================== UTILITY METHODS ====================
