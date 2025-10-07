@@ -1,7 +1,7 @@
 // test/test.cjs - CommonJS specific test file
 const DiscardAPI = require('../dist/index.cjs');
 
-const API_KEY = 'qasim';
+const API_KEY = 'YOUR_API_KEY_HERE';
 
 async function runCJSTests() {
   console.log('🧪 Starting CommonJS Specific Tests...\n');
