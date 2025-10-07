@@ -1464,6 +1464,27 @@ class DiscardAPI {
     return this.request('/api/klipy/gif', 'GET', params);
   }
 
+  // ==================== TOOLS ====================
+  toolsCompress(params: { type: string; text: string }) {
+    return this.request('/api/compress', 'GET', params);
+  }
+
+  toolsDecompress(params: { type: string; data: string }) {
+    return this.request('/api/decompress', 'GET', params);
+  }
+
+  toolsBanklogo(params: { domain: string }) {
+    return this.request('/api/tools/banklogo', 'GET', params);
+  }
+  
+  toolsDetectLang(params: { text: string }) {
+    return this.request('/api/tools/detect', 'GET', params);
+  }
+
+  toolsDictionary(params: { word: string }) {
+    return this.request('/api/tools/dictionary', 'GET', params);
+  }
+
   // ==================== UTILITY METHODS ====================
   setFullResponse(value: boolean): void {
     this.fullResponse = value;
