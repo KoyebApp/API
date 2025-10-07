@@ -38,7 +38,6 @@
     "fix:cjs": "echo 'module.exports = module.exports.default;' >> dist/index.cjs",
     "test": "node test/test.js",
     "prepublishOnly": "npm run build"
-   }
   },
   "keywords": [
     "discard-api",
