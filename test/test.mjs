@@ -1,7 +1,7 @@
 // test/test.mjs - ES Module specific test file
 import DiscardAPI from '../dist/index.mjs';
 
-const API_KEY = 'qasim';
+const API_KEY = 'YOUR_API_KEY_HERE';
 
 async function runESMTests() {
   console.log('🧪 Starting ES Module Specific Tests...\n');
@@ -25,7 +25,7 @@ async function runESMTests() {
     },
     {
       name: 'Download - TikTok',
-      fn: () => api.downloadTikTok({ url: 'https://vm.tiktok.com/ZSBKon146' })
+      fn: () => api.dlTikTok({ url: 'https://vm.tiktok.com/ZSBKon146' })
     },
     {
       name: 'URL Shortener - Tiny',
